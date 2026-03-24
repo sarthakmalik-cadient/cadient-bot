@@ -9,16 +9,19 @@ load_dotenv()
 # ==============================
 
 HF_TOKEN = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
 # ==============================
 # 🤖 LLM CONFIGURATION
 # ==============================
 
-# Choose: "local" or "cloud"
-LLM_MODE = "cloud"
+# Choose: "huggingface" or "anthropic"
+LLM_PROVIDER = "anthropic"
 
-# HuggingFace model for generation
-LLM_MODEL = "google/gemma-2-9b-it"
+# Model for generation
+# For huggingface: "google/gemma-2-9b-it" 
+# For anthropic: "claude-3-haiku-20240307"
+LLM_MODEL = "claude-3-haiku-20240307"
 
 # LLM generation parameters
 MAX_NEW_TOKENS = 512
@@ -37,15 +40,10 @@ EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 CHUNK_SIZE = 400  # Target tokens
 CHUNK_OVERLAP = 40 # Token overlap
 
-# Choose: "faiss" or "pinecone"
-VECTOR_STORE_TYPE = "faiss"
-
-# FAISS Configuration
+# ==============================
+# 🧠 VECTOR STORE (FAISS)
+# ==============================
 FAISS_INDEX_PATH = "vectorstore/faiss_index"
-
-# Pinecone Configuration
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
 
 # ==============================
 # 📂 PATHS

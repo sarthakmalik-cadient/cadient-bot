@@ -89,6 +89,7 @@
             font-weight: 600;
             background: linear-gradient(90deg, var(--primary), var(--primary-light));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -359,6 +360,9 @@
     const userInput = document.getElementById('user-input');
     const sendBtn = document.getElementById('send-btn');
     const clearBtn = document.getElementById('clear-chat');
+    
+    // Generate a session ID
+    const sessionId = Math.random().toString(36).substring(7);
 
     // Initialize Lucide icons
     lucide.createIcons();
@@ -397,7 +401,6 @@
         chatWindow.appendChild(wrapper);
         chatWindow.scrollTop = chatWindow.scrollHeight;
         
-        // Return wrapper for potential manipulation
         return wrapper;
     }
 
@@ -430,17 +433,22 @@
             const response = await fetch('/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: message })
+                body: JSON.stringify({ message: message, session_id: sessionId })
             });
             const data = await response.json();
             
             chatWindow.removeChild(typingIndicator);
-            addMessage(data.response, false);
+            
+            let fullMsg = data.message;
+            if (data.product_list && data.product_list.length > 0) {
+                fullMsg += "\n\n**Suggested Features:** " + data.product_list.join(", ");
+            }
+            addMessage(fullMsg, false);
         } catch (error) {
             if (chatWindow.contains(typingIndicator)) {
                 chatWindow.removeChild(typingIndicator);
             }
-            addMessage("I'm sorry, I encounterd an issue connecting to the server. Please try again soon.", false);
+            addMessage("I'm sorry, I encountered an issue connecting to the server.", false);
         } finally {
             userInput.disabled = false;
             sendBtn.disabled = false;
@@ -453,10 +461,19 @@
         if (e.key === 'Enter') sendMessage();
     });
 
-    clearBtn.addEventListener('click', () => {
+    clearBtn.addEventListener('click', async () => {
         if (confirm('Are you sure you want to clear the chat?')) {
-            chatWindow.innerHTML = '';
-            addMessage("Hello! I'm your Cadient Assistant. How can I help you today?", false);
+            try {
+                await fetch('/clear', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ session_id: sessionId })
+                });
+                chatWindow.innerHTML = '';
+                addMessage("Hello! I'm your Cadient Assistant. How can I help you today?", false);
+            } catch (error) {
+                console.error('Failed to clear session:', error);
+            }
         }
     });
 

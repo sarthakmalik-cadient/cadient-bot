@@ -7,5 +7,5 @@ sentence-transformers
 faiss-cpu
 docx2txt
 python-dotenv
-pinecone-client
-langchain-pinecone
+langchain-anthropic
+anthropic
