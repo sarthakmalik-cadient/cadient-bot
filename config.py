@@ -34,8 +34,8 @@ EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 # ✂️ TEXT SPLITTING
 # ==============================
 
-CHUNK_SIZE = 500  # Target tokens
-CHUNK_OVERLAP = 50 # Token overlap
+CHUNK_SIZE = 400  # Target tokens
+CHUNK_OVERLAP = 40 # Token overlap
 
 # Choose: "faiss" or "pinecone"
 VECTOR_STORE_TYPE = "faiss"
@@ -57,7 +57,7 @@ DOCS_PATH = "docs"
 # 🔎 RETRIEVER
 # ==============================
 
-TOP_K = 6
+TOP_K = 3
 
 # ==============================
 # 🌐 FLASK
