@@ -18,7 +18,7 @@ HF_TOKEN = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 LLM_MODE = "cloud"
 
 # HuggingFace model for generation
-LLM_MODEL = "mistralai/Mistral-7B-Instruct-v0.2"
+LLM_MODEL = "google/gemma-2-9b-it"
 
 # LLM generation parameters
 MAX_NEW_TOKENS = 512
