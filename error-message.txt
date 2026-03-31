@@ -1,0 +1,515 @@
+curl -sv -X POST 'https://consultant-api-dev.cadient.ai/chat' \
+  -H 'Content-Type: application/json' \
+  -d '{"message": "I'\''m preparing a personalized landing page for In-N-Out Burger. Recommended product: smart-tenure.md. Their top hiring problems: Catastrophic Employee Retention Crisis; Massive Candidate Experience Failure and Drop-offs; Zero Assessment Usage Creating Quality-of-Hire Problems. Recommended angle: \"We helped you process 17.5 million applicants before, but the 87% turnover and 1.6M+ candidate dropoffs showed there were gaps in the foundation. Our predictive retention technology has evolved significantly since 2022 - we can now predict which candidates will stay beyond 90 days before you make the offer. Given your massive hiring volumes, even small improvements in retention and candidate experience could save millions in costs. Worth exploring what'\''s changed in our platform since you left?\". Please provide the most compelling value propositions, key capabilities, and outcome-focused language to highlight for this company specifically.", "session_id": "debug_angle_test_001"}' 2>&1
+* Host consultant-api-dev.cadient.ai:443 was resolved.
+* IPv6: 64:ff9b::6258:2ec5, 64:ff9b::3401:9938, 64:ff9b::3d5:5cfb
+* IPv4: 98.88.46.197, 52.1.153.56, 3.213.92.251
+*   Trying [64:ff9b::6258:2ec5]:443...
+*   Trying 98.88.46.197:443...
+* Connected to consultant-api-dev.cadient.ai (64:ff9b::6258:2ec5) port 443
+* ALPN: curl offers h2,http/1.1
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256 / X25519 / RSASSA-PSS
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=*.cadient.ai
+*  start date: Dec  9 00:00:00 2025 GMT
+*  expire date: Jan  7 23:59:59 2027 GMT
+*  subjectAltName: host "consultant-api-dev.cadient.ai" matched cert's "*.cadient.ai"
+*  issuer: C=US; O=Amazon; CN=Amazon RSA 2048 M04
+*  SSL certificate verify ok.
+*   Certificate level 0: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 1: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+*   Certificate level 2: Public key type RSA (2048/112 Bits/secBits), signed using sha256WithRSAEncryption
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://consultant-api-dev.cadient.ai/chat
+* [HTTP/2] [1] [:method: POST]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: consultant-api-dev.cadient.ai]
+* [HTTP/2] [1] [:path: /chat]
+* [HTTP/2] [1] [user-agent: curl/8.5.0]
+* [HTTP/2] [1] [accept: */*]
+* [HTTP/2] [1] [content-type: application/json]
+* [HTTP/2] [1] [content-length: 998]
+> POST /chat HTTP/2
+> Host: consultant-api-dev.cadient.ai
+> User-Agent: curl/8.5.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 998
+> 
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+< HTTP/2 500 
+< date: Tue, 31 Mar 2026 09:47:03 GMT
+< content-type: text/html; charset=utf-8
+< content-length: 31680
+< server: nginx/1.28.0
+< 
+<!doctype html>
+<html lang=en>
+  <head>
+    <title>pydantic_core._pydantic_core.ValidationError: 2 validation errors for ChatResponse
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+product_list
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+ // Werkzeug Debugger</title>
+    <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+    <link rel="shortcut icon"
+        href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
+    <script>
+      var CONSOLE_MODE = false,
+          EVALEX = false,
+          EVALEX_TRUSTED = false,
+          SECRET = "3MXcLhvAxVyO81PXnzd8";
+    </script>
+  </head>
+  <body style="background-color: #fff">
+    <div class="debugger">
+<h1>ValidationError</h1>
+<div class="detail">
+  <p class="errormsg">pydantic_core._pydantic_core.ValidationError: 2 validation errors for ChatResponse
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+product_list
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</p>
+</div>
+<h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
+<div class="traceback">
+  <h3></h3>
+  <ul><li><div class="frame" id="frame-281472654847872">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py"</cite>,
+      line <em class="line">1536</em>,
+      in <code class="function">__call__</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">    </span>) -&gt; cabc.Iterable[bytes]:</pre>
+<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;The WSGI server calls the Flask application object as the</pre>
+<pre class="line before"><span class="ws">        </span>WSGI application. This calls :meth:`wsgi_app`, which can be</pre>
+<pre class="line before"><span class="ws">        </span>wrapped to apply middleware.</pre>
+<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
+<pre class="line current"><span class="ws">        </span>return self.wsgi_app(environ, start_response)
+<span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654845424">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py"</cite>,
+      line <em class="line">1514</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+<pre class="line before"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+<pre class="line before"><span class="ws">            </span>except Exception as e:</pre>
+<pre class="line before"><span class="ws">                </span>error = e</pre>
+<pre class="line current"><span class="ws">                </span>response = self.handle_exception(e)
+<span class="ws">                </span>           ^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>except:</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre>
+<pre class="line after"><span class="ws">                </span>raise</pre>
+<pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>
+<pre class="line after"><span class="ws">        </span>finally:</pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654848016">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py"</cite>,
+      line <em class="line">1511</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>ctx = self.request_context(environ)</pre>
+<pre class="line before"><span class="ws">        </span>error: BaseException | None = None</pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+<pre class="line current"><span class="ws">                </span>response = self.full_dispatch_request()
+<span class="ws">                </span>           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>except Exception as e:</pre>
+<pre class="line after"><span class="ws">                </span>error = e</pre>
+<pre class="line after"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+<pre class="line after"><span class="ws">            </span>except:</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654848304">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py"</cite>,
+      line <em class="line">919</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>request_started.send(self, _async_wrapper=self.ensure_sync)</pre>
+<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+<pre class="line before"><span class="ws">                </span>rv = self.dispatch_request()</pre>
+<pre class="line before"><span class="ws">        </span>except Exception as e:</pre>
+<pre class="line current"><span class="ws">            </span>rv = self.handle_user_exception(e)
+<span class="ws">            </span>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(</pre>
+<pre class="line after"><span class="ws">        </span>self,</pre>
+<pre class="line after"><span class="ws">        </span>rv: ft.ResponseReturnValue | HTTPException,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654848448">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py"</cite>,
+      line <em class="line">917</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>request_started.send(self, _async_wrapper=self.ensure_sync)</pre>
+<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+<pre class="line current"><span class="ws">                </span>rv = self.dispatch_request()
+<span class="ws">                </span>     ^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>except Exception as e:</pre>
+<pre class="line after"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(</pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654848592">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py"</cite>,
+      line <em class="line">902</em>,
+      in <code class="function">dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>and req.method == &#34;OPTIONS&#34;</pre>
+<pre class="line before"><span class="ws">        </span>):</pre>
+<pre class="line before"><span class="ws">            </span>return self.make_default_options_response()</pre>
+<pre class="line before"><span class="ws">        </span># otherwise dispatch to the handler for that endpoint</pre>
+<pre class="line before"><span class="ws">        </span>view_args: dict[str, t.Any] = req.view_args  # type: ignore[assignment]</pre>
+<pre class="line current"><span class="ws">        </span>return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+<span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def full_dispatch_request(self) -&gt; Response:</pre>
+<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Dispatches the request and on top of that performs request</pre>
+<pre class="line after"><span class="ws">        </span>pre and postprocessing as well as HTTP exception catching and</pre>
+<pre class="line after"><span class="ws">        </span>error handling.</pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654848736">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/app.py"</cite>,
+      line <em class="line">15</em>,
+      in <code class="function">chat</code></h4>
+  <div class="source "><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws"></span>@app.route(&#34;/chat&#34;, methods=[&#34;POST&#34;])</pre>
+<pre class="line before"><span class="ws"></span>def chat():</pre>
+<pre class="line before"><span class="ws">    </span>user_input = request.json[&#34;message&#34;]</pre>
+<pre class="line before"><span class="ws">    </span>session_id = request.json.get(&#34;session_id&#34;, &#34;default&#34;)</pre>
+<pre class="line current"><span class="ws">    </span>data = ask_question(user_input, session_id)
+<span class="ws">    </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">    </span>return jsonify({</pre>
+<pre class="line after"><span class="ws">        </span>&#34;message&#34;: data.get(&#34;message&#34;, &#34;&#34;),</pre>
+<pre class="line after"><span class="ws">        </span>&#34;product_list&#34;: data.get(&#34;product_list&#34;, [])</pre>
+<pre class="line after"><span class="ws">    </span>})</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654848880">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/services/chatbot_service.py"</cite>,
+      line <em class="line">25</em>,
+      in <code class="function">ask_question</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">        </span>sessions[session_id] = []</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>history_str = format_history(sessions[session_id])</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span># response is now a ChatResponse object</pre>
+<pre class="line current"><span class="ws">    </span>resp_obj = rag_chain.invoke({
+<span class="ws">    </span>           </pre>
+<pre class="line after"><span class="ws">        </span>&#34;question&#34;: question,</pre>
+<pre class="line after"><span class="ws">        </span>&#34;chat_history&#34;: history_str</pre>
+<pre class="line after"><span class="ws">    </span>})</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span># Convert Pydantic object to dictionary</pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654849024">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/runnables/base.py"</cite>,
+      line <em class="line">3157</em>,
+      in <code class="function">invoke</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">                </span>)</pre>
+<pre class="line before"><span class="ws">                </span>with set_config_context(config) as context:</pre>
+<pre class="line before"><span class="ws">                    </span>if i == 0:</pre>
+<pre class="line before"><span class="ws">                        </span>input_ = context.run(step.invoke, input_, config, **kwargs)</pre>
+<pre class="line before"><span class="ws">                    </span>else:</pre>
+<pre class="line current"><span class="ws">                        </span>input_ = context.run(step.invoke, input_, config)
+<span class="ws">                        </span>         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span># finish the root run</pre>
+<pre class="line after"><span class="ws">        </span>except BaseException as e:</pre>
+<pre class="line after"><span class="ws">            </span>run_manager.on_chain_error(e)</pre>
+<pre class="line after"><span class="ws">            </span>raise</pre>
+<pre class="line after"><span class="ws">        </span>else:</pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654849168">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/output_parsers/base.py"</cite>,
+      line <em class="line">207</em>,
+      in <code class="function">invoke</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>input: str | BaseMessage,</pre>
+<pre class="line before"><span class="ws">        </span>config: RunnableConfig | None = None,</pre>
+<pre class="line before"><span class="ws">        </span>**kwargs: Any,</pre>
+<pre class="line before"><span class="ws">    </span>) -&gt; T:</pre>
+<pre class="line before"><span class="ws">        </span>if isinstance(input, BaseMessage):</pre>
+<pre class="line current"><span class="ws">            </span>return self._call_with_config(
+<span class="ws">            </span>       </pre>
+<pre class="line after"><span class="ws">                </span>lambda inner_input: self.parse_result(</pre>
+<pre class="line after"><span class="ws">                    </span>[ChatGeneration(message=inner_input)]</pre>
+<pre class="line after"><span class="ws">                </span>),</pre>
+<pre class="line after"><span class="ws">                </span>input,</pre>
+<pre class="line after"><span class="ws">                </span>config,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654849312">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/runnables/base.py"</cite>,
+      line <em class="line">2060</em>,
+      in <code class="function">_call_with_config</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>child_config = patch_config(config, callbacks=run_manager.get_child())</pre>
+<pre class="line before"><span class="ws">            </span>with set_config_context(child_config) as context:</pre>
+<pre class="line before"><span class="ws">                </span>output = cast(</pre>
+<pre class="line before"><span class="ws">                    </span>&#34;Output&#34;,</pre>
+<pre class="line current"><span class="ws">                    </span>context.run(
+<span class="ws">                    </span>^</pre>
+<pre class="line after"><span class="ws">                        </span>call_func_with_variable_args,  # type: ignore[arg-type]</pre>
+<pre class="line after"><span class="ws">                        </span>func,</pre>
+<pre class="line after"><span class="ws">                        </span>input_,</pre>
+<pre class="line after"><span class="ws">                        </span>config,</pre>
+<pre class="line after"><span class="ws">                        </span>run_manager,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654849456">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/runnables/config.py"</cite>,
+      line <em class="line">461</em>,
+      in <code class="function">call_func_with_variable_args</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>kwargs[&#34;config&#34;] = patch_config(config, callbacks=run_manager.get_child())</pre>
+<pre class="line before"><span class="ws">        </span>else:</pre>
+<pre class="line before"><span class="ws">            </span>kwargs[&#34;config&#34;] = config</pre>
+<pre class="line before"><span class="ws">    </span>if run_manager is not None and accepts_run_manager(func):</pre>
+<pre class="line before"><span class="ws">        </span>kwargs[&#34;run_manager&#34;] = run_manager</pre>
+<pre class="line current"><span class="ws">    </span>return func(input, **kwargs)  # type: ignore[call-arg]
+<span class="ws">    </span>       ^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws"></span>def acall_func_with_variable_args(</pre>
+<pre class="line after"><span class="ws">    </span>func: Callable[[Input], Awaitable[Output]]</pre>
+<pre class="line after"><span class="ws">    </span>| Callable[[Input, RunnableConfig], Awaitable[Output]]</pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654849600">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/output_parsers/base.py"</cite>,
+      line <em class="line">208</em>,
+      in <code class="function">&lt;lambda&gt;</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>config: RunnableConfig | None = None,</pre>
+<pre class="line before"><span class="ws">        </span>**kwargs: Any,</pre>
+<pre class="line before"><span class="ws">    </span>) -&gt; T:</pre>
+<pre class="line before"><span class="ws">        </span>if isinstance(input, BaseMessage):</pre>
+<pre class="line before"><span class="ws">            </span>return self._call_with_config(</pre>
+<pre class="line current"><span class="ws">                </span>lambda inner_input: self.parse_result(
+<span class="ws">                </span>                    </pre>
+<pre class="line after"><span class="ws">                    </span>[ChatGeneration(message=inner_input)]</pre>
+<pre class="line after"><span class="ws">                </span>),</pre>
+<pre class="line after"><span class="ws">                </span>input,</pre>
+<pre class="line after"><span class="ws">                </span>config,</pre>
+<pre class="line after"><span class="ws">                </span>run_type=&#34;parser&#34;,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654849744">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/output_parsers/openai_tools.py"</cite>,
+      line <em class="line">369</em>,
+      in <code class="function">parse_result</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">                    </span>f&#34;Unknown tool type: {res[&#39;type&#39;]!r}. Available tools: {available}&#34;</pre>
+<pre class="line before"><span class="ws">                </span>)</pre>
+<pre class="line before"><span class="ws">                </span>raise OutputParserException(msg) from e</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line current"><span class="ws">                </span>pydantic_objects.append(tool(**res[&#34;args&#34;]))
+<span class="ws">                </span>                        ^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>except (ValidationError, ValueError):</pre>
+<pre class="line after"><span class="ws">                </span>if partial:</pre>
+<pre class="line after"><span class="ws">                    </span>continue</pre>
+<pre class="line after"><span class="ws">                </span>has_max_tokens_stop_reason = any(</pre>
+<pre class="line after"><span class="ws">                    </span>generation.message.response_metadata.get(&#34;stop_reason&#34;)</pre></div>
+</div>
+
+<li><div class="frame" id="frame-281472654849888">
+  <h4>File <cite class="filename">"/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/pydantic/main.py"</cite>,
+      line <em class="line">250</em>,
+      in <code class="function">__init__</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>`self` is explicitly positional-only to allow `self` as a field name.</pre>
+<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
+<pre class="line before"><span class="ws">        </span># `__tracebackhide__` tells pytest and some other tools to omit this function from tracebacks</pre>
+<pre class="line before"><span class="ws">        </span>__tracebackhide__ = True</pre>
+<pre class="line current"><span class="ws">        </span>validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+<span class="ws">        </span>                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>if self is not validated_self:</pre>
+<pre class="line after"><span class="ws">            </span>warnings.warn(</pre>
+<pre class="line after"><span class="ws">                </span>&#39;A custom validator is returning a value other than `self`.\n&#39;</pre>
+<pre class="line after"><span class="ws">                </span>&#34;Returning anything other than `self` from a top level model validator isn&#39;t supported when validating via `__init__`.\n&#34;</pre>
+<pre class="line after"><span class="ws">                </span>&#39;See the `model_validator` docs (https://docs.pydantic.dev/latest/concepts/validators/#model-validators) for more details.&#39;,</pre></div>
+</div>
+</ul>
+  <blockquote>pydantic_core._pydantic_core.ValidationError: 2 validation errors for ChatResponse
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+product_list
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</blockquote>
+</div>
+
+<div class="plain">
+    <p>
+      This is the Copy/Paste friendly version of the traceback.
+    </p>
+    <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
+  File &#34;/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py&#34;, line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py&#34;, line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py&#34;, line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py&#34;, line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py&#34;, line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py&#34;, line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/ai/cadient-chat-bot/app.py&#34;, line 15, in chat
+    data = ask_question(user_input, session_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/ai/cadient-chat-bot/services/chatbot_service.py&#34;, line 25, in ask_question
+    resp_obj = rag_chain.invoke({
+               ^^^^^^^^^^^^^^^^^^
+  File &#34;/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/runnables/base.py&#34;, line 3157, in invoke
+    input_ = context.run(step.invoke, input_, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/output_parsers/base.py&#34;, line 207, in invoke
+    return self._call_with_config(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/runnables/base.py&#34;, line 2060, in _call_with_config
+    context.run(
+  File &#34;/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/runnables/config.py&#34;, line 461, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/output_parsers/base.py&#34;, line 208, in &lt;lambda&gt;
+    lambda inner_input: self.parse_result(
+                        ^^^^^^^^^^^^^^^^^^
+  File &#34;/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/output_parsers/openai_tools.py&#34;, line 369, in parse_result
+    pydantic_objects.append(tool(**res[&#34;args&#34;]))
+                            ^^^^^^^^^^^^^^^^^^^^
+  File &#34;/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/pydantic/main.py&#34;, line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for ChatResponse
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+product_list
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</textarea>
+</div>
+<div class="explanation">
+  The debugger caught an exception in your WSGI application.  You can now
+  look at the traceback which led to the error.  <span class="nojavascript">
+  If you enable JavaScript you can also use additional features such as code
+  execution (if the evalex feature is enabled), automatic pasting of the
+  exceptions and much more.</span>
+</div>
+      <div class="footer">
+        Brought to you by <strong class="arthur">DON'T PANIC</strong>, your
+        friendly Werkzeug powered traceback interpreter.
+      </div>
+    </div>
+
+    <div class="pin-prompt">
+      <div class="inner">
+        <h3>Console Locked</h3>
+        <p>
+          The console is locked and needs to be unlocked by entering the PIN.
+          You can find the PIN printed out on the standard output of your
+          shell that runs the server.
+        <form>
+          <p>PIN:
+            <input type=text name=pin size=14>
+            <input type=submit name=btn value="Confirm Pin">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+
+Traceback (most recent call last):
+  File "/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ai/cadient-chat-bot/app.py", line 15, in chat
+    data = ask_question(user_input, session_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ai/cadient-chat-bot/services/chatbot_service.py", line 25, in ask_question
+    resp_obj = rag_chain.invoke({
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 3157, in invoke
+    input_ = context.run(step.invoke, input_, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/output_parsers/base.py", line 207, in invoke
+    return self._call_with_config(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 2060, in _call_with_config
+    context.run(
+  File "/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/runnables/config.py", line 461, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/output_parsers/base.py", line 208, in <lambda>
+    lambda inner_input: self.parse_result(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/langchain_core/output_parsers/openai_tools.py", line 369, in parse_result
+    pydantic_objects.append(tool(**res["args"]))
+                            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ai/cadient-chat-bot/venv/lib/python3.12/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for ChatResponse
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+product_list
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+
+
+-->
+* Connection #0 to host consultant-api-dev.cadient.ai left intact

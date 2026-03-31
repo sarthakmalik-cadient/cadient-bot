@@ -20,13 +20,19 @@ def ask_question(question: str, session_id: str = "default"):
         sessions[session_id] = []
     
     history_str = format_history(sessions[session_id])
-    
-    # response is now a ChatResponse object
-    resp_obj = rag_chain.invoke({
-        "question": question,
-        "chat_history": history_str
-    })
-    
+    try:
+        # response is now a ChatResponse object
+        resp_obj = rag_chain.invoke({
+            "question": question,
+            "chat_history": history_str
+        })
+    except Exception as e:
+        print(f"Error during chain invocation: {e}")
+        # Fallback to a default response if the LLM/parser fails completely
+        resp_obj = {
+            "message": "I'm sorry, I'm having trouble processing that right now. Could you rephrase your question?",
+            "product_list": []
+        }
     # Convert Pydantic object to dictionary
     if hasattr(resp_obj, 'model_dump'):
         resp_dict = resp_obj.model_dump()

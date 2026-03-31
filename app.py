@@ -7,6 +7,10 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route("/test")
+def test():
+    return render_template("test_widget.html")
+
 @app.route("/chat", methods=["POST"])
 def chat():
     user_input = request.json["message"]

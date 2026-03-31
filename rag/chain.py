@@ -11,8 +11,8 @@ from rag.llm import get_cloud_llm, get_local_llm, get_anthropic_llm
 
 class ChatResponse(BaseModel):
     """Structured response from the chatbot."""
-    message: str = Field(description="The conversational sales response to the user's question.")
-    product_list: Optional[List[str]] = Field(description="A list of specific Cadient products or features mentioned (e.g., ['SmartMatch™', 'Decision Point™']). Set to null if none are applicable.")
+    message: str = Field(default="", description="The conversational sales response to the user's question.")
+    product_list: List[str] = Field(default_factory=list, description="A list of specific Cadient products or features mentioned (e.g., ['SmartMatch™', 'Decision Point™']).")
 
 def build_rag_chain():
 
